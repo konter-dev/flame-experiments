@@ -1,28 +1,28 @@
-import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
+import 'package:flame/flame.dart';
+import 'package:flame/extensions.dart';
+import 'package:flame/input.dart';
+import 'package:flame_simple_platformer/game/utils/audio_manager.dart';
 
-import 'package:simple_platformer/level/level.dart';
+import 'model/player_data.dart';
 
-class SimplePlatformer extends FlameGame {
-  Level? _currentLevel;
+// Represents the game world
+class SimplePlatformer extends FlameGame
+    with HasCollisionDetection, HasKeyboardHandlerComponents {
+  // Reference to common spritesheet
+  late Image spriteSheet;
+
+  final playerData = PlayerData();
+  final fixedResolution = Vector2(640, 330);
 
   @override
   Future<void> onLoad() async {
+    // Device setup
     await Flame.device.fullScreen();
     await Flame.device.setLandscape();
 
-    camera.viewport = FixedResolutionViewport(Vector2(640, 384));
-
-    // _currentLevel = Level('level2.tmx');
-    // add(_currentLevel!);
-    loadLevel('level2.tmx');
-
-    return super.onLoad();
-  }
-
-  void loadLevel(String levelName) {
-    _currentLevel?.removeFromParent();
-    _currentLevel = Level(levelName);
-    add(_currentLevel!);
+    // Loads all the audio assets
+    await AudioManager.init();
+    spriteSheet = await images.load('Spritesheet.png');
   }
 }

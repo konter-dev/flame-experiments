@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "simple_platformer" "\0"
+            VALUE "FileDescription", "flame_simple_platformer" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "simple_platformer" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "simple_platformer.exe" "\0"
-            VALUE "ProductName", "simple_platformer" "\0"
+            VALUE "InternalName", "flame_simple_platformer" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2022 com.example. All rights reserved." "\0"
+            VALUE "OriginalFilename", "flame_simple_platformer.exe" "\0"
+            VALUE "ProductName", "flame_simple_platformer" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

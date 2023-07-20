@@ -1,6 +1,7 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <application
-        android:label="simple_platformer"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.flame_simple_platformer">
+   <application
+        android:label="flame_simple_platformer"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
